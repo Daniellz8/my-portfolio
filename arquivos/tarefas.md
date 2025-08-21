@@ -34,8 +34,7 @@ Este documento lista as tarefas pendentes para o seu portfólio. Use esta lista 
        git add .gitattributes
        git commit -m "Configurar Git LFS"
       ​#Enviar:
-       git push
-      </span>
+       git push <span>
 
 * [ ] 
 
