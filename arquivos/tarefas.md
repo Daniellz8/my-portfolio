@@ -25,16 +25,20 @@ Este documento lista as tarefas pendentes para o seu portfólio. Use esta lista 
 * [ ] **Adicionar um easter-egg**
      
 * [ ] **Adicionar videos e descrições dos projetos nos cards**
-      <span style="color: red;">Deve-se configurar o rastreio de arquivos grandes
-      #Instalação:
-       git lfs install
-      ​#Rastreio dos arquivos:
-       git lfs track "*.extensão"
-      ​#Commit:
-       git add .gitattributes
-       git commit -m "Configurar Git LFS"
-      ​#Enviar:
-       git push <span>
+      <span style="color: red;">Deve-se configurar o rastreio de arquivos grandes</span>
+
+**<span style="color: red;">Instalação:</span>**
+<span style="color: red;">`git lfs install`</span>
+
+**<span style="color: red;">Rastreio dos arquivos:</span>**
+<span style="color: red;">`git lfs track "*.extensão"`</span>
+
+**<span style="color: red;">Commit:</span>**
+<span style="color: red;">`git add .gitattributes`</span>
+<span style="color: red;">`git commit -m "Configurar Git LFS"`</span>
+
+**<span style="color: red;">Enviar:</span>**
+<span style="color: red;">`git push`</span>
 
 * [ ] 
 
