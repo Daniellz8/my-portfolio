@@ -1,0 +1,187 @@
+/* Media Queries para dispositivos com telas de até 768px */
+@media (max-width: 768px) {
+
+    /* Ajustes gerais de espaçamento e layout */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 40px 0; /* Adiciona espaçamento entre todas as seções */
+    }
+
+    /* Header e Navegação */
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-bottom: none;
+        height: auto;
+    }
+    
+    .nome-header {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .link-redes-header {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .barra-nav-home {
+        position: fixed; /* Mudei para fixed para ficar sempre visível no topo */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        border-radius: 0;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        gap: 20px;
+        padding: 10px 0;
+        justify-content: space-around;
+        background-color: #292F36; /* Fundo para garantir visibilidade */
+        z-index: 1001; /* Garante que fique acima de outros elementos */
+    }
+
+    /* Seção Home */
+    .home {
+        padding-top: 80px; /* Adiciona espaço para a barra de navegação fixa */
+        height: auto;
+    }
+    
+    .container-pai-home {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        width: 90%;
+    }
+    
+    .card-portfolio {
+        width: 100%;
+        height: auto;
+    }
+    
+    .tipo-perfil {
+        margin-top: 20px;
+    }
+    
+    .home-description {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .home-description h1,
+    .home-description h2,
+    .home-description p,
+    .home-description a {
+        margin: 0;
+    }
+    
+    .home-description a {
+        margin-top: 20px;
+    }
+    
+    .card-info-adicionais {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    /* Seção Sobre Mim */
+    .div-pai-sobre-mim {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        width: 90%;
+    }
+    
+    .descricao-sobre-mim {
+        width: 100%;
+    }
+    
+    .descricao-sobre-mim h2 {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+    .sobre-mim-texto {
+        padding: 10px;
+    }
+    
+    .sobre-mim img {
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
+    
+    /* Seção Skills */
+    .div-pai-skills {
+        width: 90%;
+    }
+    
+    .card-skills {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    
+    /* Seção Works */
+    .div-pai-works {
+        width: 90%;
+        height: auto; /* Ajusta a altura */
+    }
+    
+    .titulo-works {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .card-works-2 {
+        flex-direction: column;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .card-works-2::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .work-item {
+        min-width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .nav-button {
+        display: none;
+    }
+    
+    /* Seção Contato */
+    .form-contact {
+        width: 90%;
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+};
