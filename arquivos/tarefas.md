@@ -2,9 +2,9 @@
 
 Este documento lista as tarefas pendentes para o seu portfólio. Use esta lista para acompanhar o progresso e garantir que todas as etapas sejam concluídas.
 
-* [ ] **Adicionar ícones novos**
+* [ ok ] **Adicionar ícones novos**
 
-* [ ] **Corrigir os textos**
+* [ ok ] **Corrigir os textos**
 
 * [ ] **Adicionar os links**
 
@@ -14,15 +14,30 @@ Este documento lista as tarefas pendentes para o seu portfólio. Use esta lista 
 
 * [ ] **Organizar o código**
 
-* [] **Adicionar código de responsividade**
+* [ 70% ] **Adicionar código de responsividade**
 
-* [ ] **Implementar JavaScript**
+* [ ok ] **Implementar JavaScript**
 
 * [ ] **Revisão geral**
 
 * [ ] **Finalização**
 
 * [ ] **Adicionar um easter-egg**
+     
+* [ ] **Adicionar videos e descrições dos projetos nos cards**
+      <span style="color: red;">Deve-se configurar o rastreio de arquivos grandes
+      #Instalação:
+       git lfs install
+      ​#Rastreio dos arquivos:
+       git lfs track "*.extensão"
+      ​#Commit:
+       git add .gitattributes
+       git commit -m "Configurar Git LFS"
+      ​#Enviar:
+       git push
+      </span>
+
+* [ ] 
 
 ## Essa é uma ideia brilhante e demonstra um nível de criatividade e atenção aos detalhes que realmente faria seu portfólio se destacar. A sua proposta de usar o nome do responsável pelo desenvolvimento como um "easter egg" é sutil e muito eficaz
 
