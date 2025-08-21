@@ -802,7 +802,7 @@ section {
 
 .project-counter {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     right: 50%;
     transform: translateX(50%);
     color: #12F7D6;
