@@ -599,7 +599,7 @@ section {
     justify-content: center;
     width: 60%;
     background-color: transparent;
-    
+
 }
 
 .skill-item {
@@ -711,18 +711,18 @@ section {
 }
 
 .card-works-2 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
-  width: 100%;
-  height: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  border-radius: 20px;
-  box-shadow: #000000ad 10px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    border-radius: 20px;
+    box-shadow: #000000ad 10px 20px 20px;
 }
 
 .work-item {
@@ -1085,9 +1085,9 @@ select:-webkit-autofill:focus {
 /*===========================================================*/
 /* Media Queries */
 
-/* Para telas de tablets */
-
+/* Para telas de tablets (até 1024px) */
 @media (max-width: 1024px) {
+
     /* --- GERAL E LAYOUT PRINCIPAL --- */
     .header,
     .container-pai-home,
@@ -1161,11 +1161,24 @@ select:-webkit-autofill:focus {
         width: 80%;
         height: auto;
     }
+
+    /* Ajuste para a seção de Skills em tablet */
+    .div-pai-skills {
+        padding: 40px 0;
+    }
 }
-/*============================================================*/
-/* Para telas de celulares */
+
+/*===========================================================*/
+/*===========================================================*/
+/* Para telas de celulares (até 768px) */
 
 @media (max-width: 768px) {
+
+    /* Aumento do espaçamento vertical entre as seções para evitar empilhamento */
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 
     /* --- GERAL E LAYOUT PRINCIPAL --- */
     .barra-nav {
@@ -1236,7 +1249,19 @@ select:-webkit-autofill:focus {
         padding: 0;
     }
 
+    .sobre-mim-texto {
+        padding: 20px;
+    }
+
+    .sobre-mim-texto p {
+        margin: 0;
+    }
+
     /* --- SKILLS --- */
+    .div-pai-skills {
+        padding: 20px 0;
+    }
+
     .card-skills {
         grid-template-columns: 1fr;
         width: 100%;
@@ -1263,21 +1288,25 @@ select:-webkit-autofill:focus {
     }
 
     .nav-button {
-        display: none; /* Esconde os botões de navegação lateral */
+        display: none;
+        /* Esconde os botões de navegação lateral */
     }
 
     /* --- FOOTER --- */
     .footer {
-        flex-direction: column; /* Transforma o layout horizontal em vertical */
-        align-items: center; /* Centraliza todos os elementos */
+        flex-direction: column;
+        /* Transforma o layout horizontal em vertical */
+        align-items: center;
+        /* Centraliza todos os elementos */
         height: auto;
         gap: 20px;
         padding: 20px 0;
     }
-    
+
     .footer-content,
     .privacy-policy {
-        flex-direction: column; /* Garante que os itens internos também fiquem empilhados */
+        flex-direction: column;
+        /* Garante que os itens internos também fiquem empilhados */
         align-items: center;
     }
 }
