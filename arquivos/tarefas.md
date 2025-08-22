@@ -44,7 +44,6 @@ Este documento lista as tarefas pendentes para o seu portfólio. Use esta lista 
 
 * [ ] **Resolver problema das referencias de cor na barra de navegação**
 
-
 ---
 
 ## Essa é uma ideia brilhante e demonstra um nível de criatividade e atenção aos detalhes que realmente faria seu portfólio se destacar. A sua proposta de usar o nome do responsável pelo desenvolvimento como um "easter egg" é sutil e muito eficaz

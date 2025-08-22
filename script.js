@@ -1,3 +1,42 @@
+// Seleciona todos os links da barra de navegação
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Seleciona todas as seções da página com um ID
+const sections = document.querySelectorAll('section');
+
+// Função para atualizar a classe 'active-link'
+const updateNavLink = () => {
+  // Pega a posição de rolagem atual
+  const scrollPosition = window.scrollY;
+
+  // Itera sobre cada seção para verificar qual está visível
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150; // Adiciona um pequeno offset
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+
+    // Verifica se a posição de rolagem está dentro da seção
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      // Remove a classe 'active-link' de todos os links
+      navLinks.forEach(link => link.classList.remove('active-link'));
+
+      // Adiciona a classe 'active-link' ao link correspondente
+      const currentLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+      if (currentLink) {
+        currentLink.classList.add('active-link');
+      }
+    }
+  });
+};
+
+// Adiciona o evento de scroll para chamar a função de atualização
+window.addEventListener('scroll', updateNavLink);
+
+// Chama a função uma vez ao carregar a página
+updateNavLink();
+
+/*===========================================================*/
+/*===========================================================*/
 /* work Section */
 
 // Seleciona o contêiner de projetos, os botões e o novo contêiner dos círculos
