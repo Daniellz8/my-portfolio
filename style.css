@@ -708,6 +708,7 @@ section {
     height: 100%;
     background-color: transparent;
     position: relative;
+    scroll-snap-type: x mandatory;
 }
 
 .card-works-2 {
@@ -732,6 +733,7 @@ section {
     min-width: 100%;
     height: 100%;
     background-color: #1A1E23;
+    scroll-snap-align: center;
 }
 
 .work-item img {
@@ -1083,230 +1085,161 @@ select:-webkit-autofill:focus {
 
 /*===========================================================*/
 /*===========================================================*/
-/* Media Queries */
+/*media query*/ 
 
-/* Para telas de tablets (até 1024px) */
-@media (max-width: 1024px) {
+
+@media (min-width: 200px) and (max-width: 1300px) and (orientation: landscape) {
 
     /* --- GERAL E LAYOUT PRINCIPAL --- */
-    .header,
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Ajusta espaçamento de todas as seções */
+    section {
+        padding: 80px 0 !important;
+    }
+
     .container-pai-home,
     .div-pai-sobre-mim,
     .skills-container,
     .div-pai-works,
-    .div-pai-contact {
-        width: 90%;
+    .div-pai-contact,
+    .footer {
+        width: 90% !important;
+        margin: 0 auto !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important;
     }
 
-    /* Esconde os cards de CV e Informações Adicionais */
-    .card-portfolio,
-    .card-info-adicionais {
-        display: none;
-    }
+    /* home */
 
-    /* --- HEADER --- */
-    .nome-header {
-        font-size: 20px;
-    }
-
-    .navegacao-header {
-        font-size: 16px;
-    }
-
-    /* --- HOME --- */
-    .container-pai-home {
-        flex-direction: column;
-        height: auto;
-        padding: 40px 0;
-        gap: 30px;
+    .home {
+        height: 100vh;
     }
 
     .home-description {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    .home-description h1 {
-        font-size: 32px;
-    }
-
-    .home-description h2 {
-        font-size: 24px;
-    }
-
-    .home-description h1,
-    .home-description h2,
-    .home-description p,
-    .link-msg {
-        margin: 10px 0;
-    }
-
-    /* --- SOBRE MIM --- */
-    .div-pai-sobre-mim {
-        flex-direction: column;
-        height: auto;
-        padding: 40px 0;
-        gap: 30px;
-    }
-
-    .descricao-sobre-mim,
-    .img-section {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    .sobre-mim img {
         width: 80%;
-        height: auto;
+        text-align: center;
     }
 
-    /* Ajuste para a seção de Skills em tablet */
-    .div-pai-skills {
-        padding: 40px 0;
+    /* sobre */
+
+    .sobre-mim {
+        height: 120vh;
+    }
+
+    /* skills */
+
+    .skills {
+        height: 120vh;
+    }
+
+    /* works */
+
+    .works {
+        height: 120vh;
+    }
+    .card-works-2 {
+        width: 80%;
+        height: 80%;
+    }
+
+    /* contact */
+
+    .contact {
+        height: 100vh;
+    }
+
+    /* footer */
+
+    .footer {
+        width: 90%;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+
+    /* Oculta os cards e a barra de navegação */
+    .barra-nav,
+    .card-portfolio,
+    .card-info-adicionais,
+    .navegacao-header,
+    .link-redes-header,
+    .nav-button,
+    .img-section {
+        display: none !important;
     }
 }
 
+
 /*===========================================================*/
 /*===========================================================*/
-/* Para telas de celulares (até 768px) */
-
-@media (max-width: 768px) {
-
-    /* Aumento do espaçamento vertical entre as seções para evitar empilhamento */
-    section {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+/* Media Query para iPad (768px a 1024px) em Orientação Retrato */
+@media (min-width: 200px) and (max-width: 1024px) and (orientation: portrait) {
 
     /* --- GERAL E LAYOUT PRINCIPAL --- */
-    .barra-nav {
-        display: none;
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Ajusta espaçamento de todas as seções */
+    section {
+        padding: 60px 0 !important;
     }
 
     .container-pai-home,
     .div-pai-sobre-mim,
     .skills-container,
     .div-pai-works,
-    .div-pai-contact {
-        flex-direction: column;
-        width: 90%;
-        padding: 20px 0;
-        height: auto;
+    .div-pai-contact,
+    .footer {
+        width: 90% !important;
+        margin: 0 auto !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important;
     }
 
-    /* Esconde os cards na seção Home */
-    .card-portfolio,
-    .card-info-adicionais {
-        display: none;
+    /* home */
+
+    .home {
+        height: 60vh;
     }
 
-    /* --- HEADER --- */
-    .header {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        padding: 20px 0;
-    }
-
-    /* Oculta a navegação e os links de redes sociais para simplificar */
-    .navegacao-header,
-    .link-redes-header {
-        display: none;
-    }
-
-    .nome-header {
-        text-align: center;
-    }
-
-    /* --- HOME --- */
-    .home-description,
-    .form-contact {
-        width: 100%;
-        padding: 0;
-    }
-
-    .home-description h1,
-    .home-description h2,
-    .home-description p {
-        text-align: center;
-        margin: 10px;
-    }
-
-    .link-msg {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    /* --- SOBRE MIM --- */
-    .sobre-mim img {
-        display: none;
-    }
-
-    .descricao-sobre-mim {
-        width: 100%;
-        padding: 0;
-    }
-
-    .sobre-mim-texto {
-        padding: 20px;
-    }
-
-    .sobre-mim-texto p {
-        margin: 0;
-    }
-
-    /* --- SKILLS --- */
-    .div-pai-skills {
-        padding: 20px 0;
-    }
-
-    .card-skills {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-
-    /* --- WORKS --- */
-    .div-pai-works {
-        width: 90%;
-    }
-
-    .work-item {
-        width: 100%;
-    }
-
-    .project-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .project-links a {
+    .home-description {
         width: 80%;
         text-align: center;
-        margin: 5px auto;
     }
 
-    .nav-button {
-        display: none;
-        /* Esconde os botões de navegação lateral */
+    /* contact */
+
+    .contact {
+        height: 50vh;
     }
 
-    /* --- FOOTER --- */
+    /* footer */
+
     .footer {
-        flex-direction: column;
-        /* Transforma o layout horizontal em vertical */
-        align-items: center;
-        /* Centraliza todos os elementos */
-        height: auto;
-        gap: 20px;
-        padding: 20px 0;
+        width: 90%;
+        flex-direction: row !important;
+        justify-content: space-between !important;
     }
 
-    .footer-content,
-    .privacy-policy {
-        flex-direction: column;
-        /* Garante que os itens internos também fiquem empilhados */
-        align-items: center;
+
+    /* Oculta os cards e a barra de navegação */
+    .barra-nav,
+    .card-portfolio,
+    .card-info-adicionais,
+    .navegacao-header,
+    .link-redes-header,
+    .nav-button,
+    .img-section {
+        display: none !important;
     }
 }
+
+/*===========================================================*/
+/*===========================================================*/

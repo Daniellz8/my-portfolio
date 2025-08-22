@@ -111,3 +111,19 @@ prevBtn.addEventListener('click', () => {
 // Inicializa a criação e o estado dos círculos ao carregar a página
 createDots();
 updateDots();
+
+// Adiciona um evento de rolagem ao contêiner de projetos para atualizar os círculos
+projectCardsContainer.addEventListener('scroll', () => {
+    // Calcula a largura de um card, incluindo o espaçamento (gap)
+    const cardWidth = projectItems[0].offsetWidth + cardGap;
+    
+    // Calcula o novo índice do card com base na posição da rolagem
+    // Math.round arredonda para o número inteiro mais próximo, garantindo que o card mais visível seja selecionado
+    const newIndex = Math.round(projectCardsContainer.scrollLeft / cardWidth);
+
+    // Evita atualizações desnecessárias se o índice não mudou
+    if (newIndex !== currentIndex) {
+        currentIndex = newIndex;
+        updateDots();
+    }
+});
