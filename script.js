@@ -37,8 +37,6 @@ updateNavLink();
 
 /*===========================================================*/
 /*===========================================================*/
-/* work Section */
-
 // Seleciona o contêiner de projetos, os botões e o novo contêiner dos círculos
 const projectCardsContainer = document.getElementById('project-cards-container');
 const prevBtn = document.getElementById('prevBtn');
@@ -52,12 +50,15 @@ const cardGap = 40; // O espaçamento entre os cards no CSS
 
 // Função principal para rolar o carrossel para um índice específico
 const scrollToProject = (index) => {
-    // Garante que o índice não saia dos limites
-    if (index < 0 || index >= totalProjects) {
-        return; // Sai da função se o índice for inválido
+    // Nova lógica de rolagem infinita
+    if (index < 0) {
+        currentIndex = totalProjects - 1; // Se for para a esquerda no início, vai para o último
+    } else if (index >= totalProjects) {
+        currentIndex = 0; // Se for para a direita no final, volta para o primeiro
+    } else {
+        currentIndex = index; // Se estiver no meio, navega normalmente
     }
 
-    currentIndex = index;
     const scrollPosition = (projectItems[0].offsetWidth + cardGap) * currentIndex;
     
     // Usa a nova API de rolagem para um comportamento mais confiável
@@ -71,6 +72,7 @@ const scrollToProject = (index) => {
 
 // Função para criar os círculos dinamicamente
 const createDots = () => {
+    projectDotsContainer.innerHTML = '';
     for (let i = 0; i < totalProjects; i++) {
         const dot = document.createElement('span');
         dot.classList.add('dot');
