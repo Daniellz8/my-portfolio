@@ -1087,7 +1087,7 @@ select:-webkit-autofill:focus {
 /*===========================================================*/
 /* Media Query para Orientação Horizontal */
 
-@media (min-width: 200px) and (max-width: 1300px) and (orientation: landscape) {
+@media (min-width: 200px) and (max-width: 1366px) and (orientation: landscape) {
 
     /* --- GERAL E LAYOUT PRINCIPAL --- */
     body {
