@@ -1116,7 +1116,7 @@ select:-webkit-autofill:focus {
     /* home */
 
     .home {
-        height: 100vh;
+        height: 100vh !important;
     }
 
     .home-description {
@@ -1127,19 +1127,19 @@ select:-webkit-autofill:focus {
     /* sobre */
 
     .sobre-mim {
-        height: 120vh;
+        height: 120vh !important;
     }
 
     /* skills */
 
     .skills {
-        height: 120vh;
+        height: 120vh !important;
     }
 
     /* works */
 
     .works {
-        height: 120vh;
+        height: 120vh !important;
     }
 
     .card-works-2 {
@@ -1150,7 +1150,7 @@ select:-webkit-autofill:focus {
     /* contact */
 
     .contact {
-        height: 100vh;
+        height: 100vh !important;
     }
 
     /* footer */
