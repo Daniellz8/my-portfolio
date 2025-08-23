@@ -1085,8 +1085,7 @@ select:-webkit-autofill:focus {
 
 /*===========================================================*/
 /*===========================================================*/
-/*media query*/ 
-
+/* Media Query para Orientação Horizontal */
 
 @media (min-width: 200px) and (max-width: 1300px) and (orientation: landscape) {
 
@@ -1142,6 +1141,7 @@ select:-webkit-autofill:focus {
     .works {
         height: 120vh;
     }
+
     .card-works-2 {
         width: 80%;
         height: 80%;
@@ -1176,7 +1176,7 @@ select:-webkit-autofill:focus {
 
 /*===========================================================*/
 /*===========================================================*/
-/* Media Query para iPad (768px a 1024px) em Orientação Retrato */
+/* Media Query para Orientação Vertical */
 @media (min-width: 200px) and (max-width: 1024px) and (orientation: portrait) {
 
     /* --- GERAL E LAYOUT PRINCIPAL --- */
@@ -1243,3 +1243,123 @@ select:-webkit-autofill:focus {
 
 /*===========================================================*/
 /*===========================================================*/
+/*===========================================================*/
+/* Media Query para telas de celulares (largura máxima de 768px) */
+@media (max-width: 440px) {
+
+    /* --- GERAL E LAYOUT PRINCIPAL --- */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Centraliza o layout geral */
+    .header,
+    .container-pai-home,
+    .div-pai-sobre-mim,
+    .skills-container,
+    .div-pai-works,
+    .div-pai-contact,
+    .footer {
+        width: 95% !important;
+        margin: 0 auto !important;
+        /* Adicionado para centralizar na horizontal */
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Ajustes para a Home */
+    .home {
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .home-description {
+        width: 100% !important;
+        height: 100vh !important;
+        text-align: center !important;
+        margin-bottom: 100px;
+    }
+
+    /* sobre */
+    .sobre-mim {
+        height: 400vh !important;
+        margin: 100px 0 !important;
+        background-image: none !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .div-pai-sobre-mim {
+        width: 100% !important;
+        height: 100vh !important;
+    }
+
+    .descricao-sobre-mim h2 {
+        box-shadow: none !important;
+        width: 100% !important;
+    }
+
+    .sobre-mim-texto {
+        width: 100% !important;
+        margin-bottom: 400px !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .descricao-sobre-mim {
+        text-align: center !important;
+    }
+
+    /* skills */
+    .skills {
+        height: 200vh !important;
+        background-image: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Ajustes para a seção Contato */
+    .contact {
+        height: auto !important;
+        margin-top: 50px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .form-contact {
+        padding: 0 !important;
+        width: 80% !important;
+        margin: 0 auto !important;
+        height: 40vh !important;
+    }
+
+    /* Ajustes para o Footer */
+    .footer {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 40vh !important;
+    }
+
+
+    /* --- ELEMENTOS QUE DEVEM SER OCULTADOS --- */
+    .barra-nav,
+    .card-portfolio,
+    .card-info-adicionais,
+    .navegacao-header,
+    .link-redes-header,
+    .nav-button,
+    .img-section, .link-msg, .header {
+        display: none !important;
+    }
+}
