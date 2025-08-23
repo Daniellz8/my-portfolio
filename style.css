@@ -1252,6 +1252,14 @@ select:-webkit-autofill:focus {
         overflow-x: hidden;
     }
 
+    /* header */
+
+    .header{
+        height: 40px !important;
+        text-align: center;
+        z-index: 9999;
+    }
+
     /* Centraliza o layout geral */
     .header,
     .container-pai-home,
@@ -1326,6 +1334,12 @@ select:-webkit-autofill:focus {
         justify-content: center !important;
     }
 
+    /* works */
+    .works {
+        margin: 40px 0 !important;
+        background-image: none;
+    }
+
     /* Ajustes para a seção Contato */
     .contact {
         height: auto !important;
@@ -1359,7 +1373,7 @@ select:-webkit-autofill:focus {
     .navegacao-header,
     .link-redes-header,
     .nav-button,
-    .img-section, .link-msg, .header {
+    .img-section, .link-msg, .span-azul-code {
         display: none !important;
     }
 }
