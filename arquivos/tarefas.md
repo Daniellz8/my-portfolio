@@ -8,6 +8,8 @@ Este documento lista as tarefas pendentes para o seu portfólio. Use esta lista 
 
 * [ ] **Adicionar os links**
 
+* [ ] **Adicinar os videos dos cards atraves do Vimeo**
+
 * [ ] **Configurar caminhos de imagens** (para visualização com GitPages)
 
 * [ ] **Revisar o código**
