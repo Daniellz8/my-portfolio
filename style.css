@@ -108,6 +108,7 @@ header {
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 80%;
     height: 80px;
     border-bottom: #4b4b4b solid 1px;
@@ -117,33 +118,19 @@ header {
     font-size: 22px;
     font-weight: 400;
     width: 100%;
-    justify-content: space-between;
-}
-
-.header a {
-    text-decoration: none;
-    font-weight: bold;
-    font-weight: 400;
-    width: 50%;
-    text-align: end;
-}
-
-.navegacao-header,
-.link-redes-header {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.navegacao-header {
-    display: flex;
-    font-size: 18px;
 }
 
 .link-redes-header {
     display: flex;
-    width: 400px;
     font-size: 16px;
+    gap: 50px;
+}
+
+.link-redes-header a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
 }
 
 /*===========================================================*/
