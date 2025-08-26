@@ -6,27 +6,27 @@ const sections = document.querySelectorAll('section');
 
 // Função para atualizar a classe 'active-link'
 const updateNavLink = () => {
-  // Pega a posição de rolagem atual
-  const scrollPosition = window.scrollY;
+    // Pega a posição de rolagem atual
+    const scrollPosition = window.scrollY;
 
-  // Itera sobre cada seção para verificar qual está visível
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150; // Adiciona um pequeno offset
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute('id');
+    // Itera sobre cada seção para verificar qual está visível
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150; // Adiciona um pequeno offset
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
 
-    // Verifica se a posição de rolagem está dentro da seção
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-      // Remove a classe 'active-link' de todos os links
-      navLinks.forEach(link => link.classList.remove('active-link'));
+        // Verifica se a posição de rolagem está dentro da seção
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            // Remove a classe 'active-link' de todos os links
+            navLinks.forEach(link => link.classList.remove('active-link'));
 
-      // Adiciona a classe 'active-link' ao link correspondente
-      const currentLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
-      if (currentLink) {
-        currentLink.classList.add('active-link');
-      }
-    }
-  });
+            // Adiciona a classe 'active-link' ao link correspondente
+            const currentLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+            if (currentLink) {
+                currentLink.classList.add('active-link');
+            }
+        }
+    });
 };
 
 // Adiciona o evento de scroll para chamar a função de atualização
@@ -38,6 +38,7 @@ updateNavLink();
 /*===========================================================*/
 /*===========================================================*/
 // Seleciona o contêiner de projetos, os botões e o novo contêiner dos círculos
+
 const projectCardsContainer = document.getElementById('project-cards-container');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -60,7 +61,7 @@ const scrollToProject = (index) => {
     }
 
     const scrollPosition = (projectItems[0].offsetWidth + cardGap) * currentIndex;
-    
+
     // Usa a nova API de rolagem para um comportamento mais confiável
     projectCardsContainer.scrollTo({
         left: scrollPosition,
@@ -116,7 +117,7 @@ updateDots();
 projectCardsContainer.addEventListener('scroll', () => {
     // Calcula a largura de um card, incluindo o espaçamento (gap)
     const cardWidth = projectItems[0].offsetWidth + cardGap;
-    
+
     // Calcula o novo índice do card com base na posição da rolagem
     // Math.round arredonda para o número inteiro mais próximo, garantindo que o card mais visível seja selecionado
     const newIndex = Math.round(projectCardsContainer.scrollLeft / cardWidth);
@@ -127,3 +128,32 @@ projectCardsContainer.addEventListener('scroll', () => {
         updateDots();
     }
 });
+
+/*===========================================================*/
+/*===========================================================*/
+// Config do Form
+
+const form = document.getElementById("meu-formulario");
+form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio padrao do formulario
+
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                window.location.href = "https://daniellz8.github.io/my-portfolio/obrigado/";
+            } else {
+                // Opcional: Mostra uma mensagem de erro se o envio falhar
+                alert("Ocorreu um erro ao enviar o formulário.");
+            }
+        }
+    };
+    xhr.send(data);
+});
+
+/*===========================================================*/
+/*===========================================================*/
