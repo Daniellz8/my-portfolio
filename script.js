@@ -129,31 +129,3 @@ projectCardsContainer.addEventListener('scroll', () => {
     }
 });
 
-/*===========================================================*/
-/*===========================================================*/
-// Config do Form
-
-const form = document.getElementById("meu-formulario");
-form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Impede o envio padrao do formulario
-
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader("Accept", "application/json");
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                window.location.href = "https://daniellz8.github.io/my-portfolio/obrigado/";
-            } else {
-                // Opcional: Mostra uma mensagem de erro se o envio falhar
-                alert("Ocorreu um erro ao enviar o formulário.");
-            }
-        }
-    };
-    xhr.send(data);
-});
-
-/*===========================================================*/
-/*===========================================================*/
