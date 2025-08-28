@@ -490,7 +490,7 @@ section {
     transition: color 0.3s ease, font-weight 0.5s ease;
 }
 
-.img-section {
+/* .img-section {
     background-color: transparent;
 }
 
@@ -507,7 +507,7 @@ section {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 10px #12F7D6;
     border-color: #12F7D6;
-}
+} */
 
 
 /*===========================================================*/
