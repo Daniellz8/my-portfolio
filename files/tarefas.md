@@ -6,17 +6,13 @@ Este documento lista as tarefas pendentes para o seu portfólio. Use esta lista 
 
 * [ ok ] **Corrigir os textos**
 
-* [ ] **Adicionar os links**
+* [ ok ] **Adicionar os links**
 
-* [ ] **Adicinar os videos dos cards atraves do Vimeo**
+* [ ok ] **Configurar caminhos de imagens** (para visualização com GitPages)
 
-* [ ] **Configurar caminhos de imagens** (para visualização com GitPages)
+* [ ok ] **Organizar o código**
 
-* [ ] **Revisar o código**
-
-* [ ] **Organizar o código**
-
-* [ 70% ] **Adicionar código de responsividade**
+* [ ok ] **Adicionar código de responsividade**
 
 * [ ok ] **Implementar JavaScript**
 
